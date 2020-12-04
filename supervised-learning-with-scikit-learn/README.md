@@ -39,6 +39,7 @@ knn = KNeighborsClassifier(n_neighbors = 6)
 knn.fit(iris['data'],iris['target'])
 ```
 - Overfitting - Underfitting
-![alt text](./images/KNN_complexity.jpg "K-Nearest Neighbors Graph with k=3 and k=6")
+
+![alt text](./images/KNN_complexity.jpg "Graph displaying the impact of adjusting k in K-Nearest Neighbors")
 
 
