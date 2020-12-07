@@ -50,7 +50,7 @@ ___
 - Cross-validation
     - The metric of interest (Ex: R**2) is dependent on the split of the data. To combat this dependency, use cross-validation.
 
-![alt text](./images/CrossValidation.jpg "Image of 5-fold cross-validation. separating the data into 5 parts and rotating so each part is used for test data and the remaining are used for training data.")
+![alt text](./images/CrossValidation.JPG "Image of 5-fold cross-validation. separating the data into 5 parts and rotating so each part is used for test data and the remaining are used for training data.")
 ```
 from sklearn.model_selection import cross_val_score
 from sklean.linear_model import LinearRegression
