@@ -132,3 +132,26 @@ knn_cv.fit(X, y)
 knn_cv.best_params_
 knn_cv.best_score_
 ```
+
+<br>
+___
+<br>
+
+## __Preprocessing data__
+### __Pipelines__
+```
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import Imputer
+imp = Imputer(missing_values='Nan', strategy='mean', axis=0)
+logreg = LogisticRegression()
+steps = [('imputation', imp),
+            ('logistic_regression', logreg)]
+pipeline = Pipeline(steps)
+X_train, X_test ...
+
+pipeline.fit(X_train,y_train)
+```
+- Imputer is a tool for handling missing values (Ex: In this case, replace all 'Nan' with the mead of the column (axis=0))
+- Steps for the pipeline - needs to be a list of tuples 
+    - Name of the relevant step & the estimator
+    - All but the last MUST be a __transformer__ and last needs to be an __estimator__
