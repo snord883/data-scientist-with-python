@@ -77,3 +77,25 @@ ys = transformed[:,1]
 plt.scatter(xs,ys,c=species)
 plt.show()
 ``` 
+___
+<br>
+
+# __Dimension Reduction__
+<br>
+
+### __Principal Component Analysis (PCA)__
+- __Intrinsic dimensions__: 
+    - number of features needed to approxiate the dataset
+    - number of PCA features with significant variance
+
+### __Non-negative Matrix Factorization (NMF)__
+- Easier to interpret and explain than PCA
+- However, all samples features must be **non-negative**
+- Comparing NMFs use __Cosine Similarity__
+```
+import pandas as pd
+norm_features = normalize(nmf_features)
+df = pd.DataFrame(norm_features, index=titles)
+current_article = df.loc['Dog bites man']
+similarities = pd.dot(current_article)
+```
