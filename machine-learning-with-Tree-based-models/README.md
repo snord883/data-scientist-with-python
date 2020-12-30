@@ -141,3 +141,9 @@ Matrix depicting the impact of High/Low values of Bias/Variance with an analogy 
 <br>
 ___
 <br>
+
+## __Hyperparameter Tuning__
+```
+# Print out 'dt's hypyerparameters
+print(dt.get_params())
+```
