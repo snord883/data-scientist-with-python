@@ -2,7 +2,7 @@
 <br>
 
 
-## __K_means clustering__
+## __K_means Clustering__
 #### __Overview__
 - Predictions are made without having to reconstruct the clusters
     - It remembers the mean of the cluster (aka - "centroids")
@@ -12,6 +12,8 @@ from sklearn.cluster import KMeans
 model = KMeans(n_clusters=3)
 model.fit(samples)
 ```
+
+![alt text](./images/kmeans.JPG "image")
 
 #### __Evaluating a clustering__
 - If data has *labels*, could use __cross tabulation__
@@ -31,9 +33,10 @@ print(ct)
 
 #### __Improve clustering__
 - Normalize the features: scale all of the ranges to be mean = 0 and standard deviation = 1
+___
 
-
-## __Visualizing hierarchies__
+## __Hierarchical Clustering__
+![alt-text](./images/hierarchy.JPG "image")
 - __Dendrogram__
     - Read from the bottom up
         - Initially there are as many clusters as there are data points
@@ -54,9 +57,17 @@ print(labels)
         - *weighted*: 
         - *centroid*: distance between the 2 centroids of each cluster
         - *median*: distance between the 2 medians of each cluster
+        - *ward*: based on the sum of squares
     - **15** in fcluster represents the height at which to limit clusterings
 
 ![alt-text](./images/Dendrogram.png "Image that illustrates a dendrogram.")
+
+__CONS of Hierarchical Clustering__:
+- Linkage runtime: you can time the execution of small code snippets with (import timeit):
+```
+%timeit sum([1,3,2])
+```
+![alt-text](./images/linkage_runtime.JPG "image")
 <br>
 ___
 <br>
