@@ -141,7 +141,7 @@ ___
 ### __Pipelines__
 ```
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import Imputer
+from sklearn.preprocessing import Imputer 
 imp = Imputer(missing_values='Nan', strategy='mean', axis=0)
 logreg = LogisticRegression()
 steps = [('imputation', imp),
